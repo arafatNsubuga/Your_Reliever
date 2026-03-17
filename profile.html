@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile — Your Reliever</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <div class="profile-layout">
+    <aside class="profile-sidebar" id="profileSidebar" aria-label="Section navigation">
+      <div class="sidebar-brand">YourReliever</div>
+      <nav class="sidebar-nav">
+        <a href="Stress&Anxiety.html" class="sidebar-link" data-target="Stress&Anxiety.html"><i class="fas fa-spa"></i><span>Meditate</span></a>
+        <a href="ContentLibrary.html" class="sidebar-link" data-target="ContentLibrary.html"><i class="fas fa-music"></i><span>Content Library</span></a>
+        <a href="ChatForum.html" class="sidebar-link" data-target="ChatForum.html"><i class="fas fa-users"></i><span>Community</span></a>
+        <a href="BookProfessional.html" class="sidebar-link" data-target="BookProfessional.html"><i class="fas fa-briefcase"></i><span>Professionals</span></a>
+        <a href="#" class="sidebar-link active" data-target="__profile__"><i class="fas fa-user-circle"></i><span>Profile</span></a>
+        <a href="#" class="sidebar-link" data-target="logout"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
+      </nav>
+      <div class="sidebar-footer">
+        <a class="sidebar-legal" href="#">Privacy Policy</a>
+      </div>
+    </aside>
+
+    <div class="content-area">
+      <!-- Navigation Bar -->
+      <nav class="profile-navbar">
+        <div class="nav-left">
+          <a href="Index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Home</span>
+          </a>
+        </div>
+        <div class="nav-center">
+          <h1 class="nav-title">My Profile</h1>
+        </div>
+        <div class="nav-right">
+          <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Inline page loader (hidden when viewing Profile) -->
+      <iframe id="contentFrame" title="Inline Page" style="display:none;border:0;width:100%;height:80vh;border-radius:12px;background:#fff;"></iframe>
+
+      <main id="profileContent" class="profile-container">
+        <!-- Profile Header Section -->
+        <section class="profile-header">
+          <div class="profile-avatar-section">
+            <div class="avatar-wrapper">
+              <img src="Images/logo.png" alt="User Avatar" class="profile-avatar" id="profile-avatar">
+              <button class="avatar-edit-btn" id="avatar-edit-btn" aria-label="Change avatar">
+                <i class="fas fa-camera"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="profile-info">
+            <h2 class="profile-name" id="profile-name">Nsubuga Arafat</h2>
+            <p class="profile-email" id="profile-email">arafat12@gmail.com</p>
+            <p class="profile-member-since">Member since <span id="member-date">October 2024</span></p>
+            <div class="streak-chip" aria-label="Current streak">
+              <i class="fas fa-fire"></i>
+              <span><span id="streak-chip-count">7</span> day streak</span>
+            </div>
+            <button class="edit-profile-btn" id="edit-profile-btn">
+              <i class="fas fa-edit"></i> Edit Profile
+            </button>
+          </div>
+        </section>
+
+        <!-- Statistics Cards -->
+        <section class="stats-section">
+          <h3 class="section-title">Your Journey</h3>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-calendar-check"></i>
+              </div>
+              <div class="stat-content">
+                <h4 class="stat-value" id="days-active">12</h4>
+                <p class="stat-label">Days Active</p>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-spa"></i>
+              </div>
+              <div class="stat-content">
+                <h4 class="stat-value" id="sessions-completed">28</h4>
+                <p class="stat-label">Sessions Completed</p>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="stat-content">
+                <h4 class="stat-value" id="total-minutes">145</h4>
+                <p class="stat-label">Minutes of Peace</p>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-fire"></i>
+              </div>
+              <div class="stat-content">
+                <h4 class="stat-value" id="streak">7</h4>
+                <p class="stat-label">Day Streak</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Recent Activity -->
+        <section class="activity-section">
+          <h3 class="section-title">Recent Activity</h3>
+          <div class="activity-list" id="activity-list">
+            <div class="activity-item">
+              <div class="activity-icon breathing">
+                <i class="fas fa-wind"></i>
+              </div>
+              <div class="activity-details">
+                <h4 class="activity-title">Breathing Exercise</h4>
+                <p class="activity-time">2 hours ago</p>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <div class="activity-icon content">
+                <i class="fas fa-book"></i>
+              </div>
+              <div class="activity-details">
+                <h4 class="activity-title">Read: Managing Daily Stress</h4>
+                <p class="activity-time">Yesterday</p>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <div class="activity-icon chat">
+                <i class="fas fa-comments"></i>
+              </div>
+              <div class="activity-details">
+                <h4 class="activity-title">Joined Chat Forum Discussion</h4>
+                <p class="activity-time">2 days ago</p>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <div class="activity-icon meditation">
+                <i class="fas fa-spa"></i>
+              </div>
+              <div class="activity-details">
+                <h4 class="activity-title">Meditation Session</h4>
+                <p class="activity-time">3 days ago</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Saved Content -->
+        <section class="saved-section">
+          <h3 class="section-title">Saved & Favorites</h3>
+          <div class="saved-tabs">
+            <button class="tab-btn active" data-tab="articles">Articles</button>
+            <button class="tab-btn" data-tab="videos">Videos</button>
+            <button class="tab-btn" data-tab="exercises">Exercises</button>
+          </div>
+          
+          <div class="saved-content" id="saved-content">
+            <div class="saved-item">
+              <div class="saved-thumbnail">
+                <i class="fas fa-file-alt"></i>
+              </div>
+              <div class="saved-info">
+                <h4 class="saved-title">5 Ways to Manage Anxiety</h4>
+                <p class="saved-meta">Article • 5 min read</p>
+              </div>
+              <button class="saved-remove-btn" aria-label="Remove from saved">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+
+            <div class="saved-item">
+              <div class="saved-thumbnail">
+                <i class="fas fa-file-alt"></i>
+              </div>
+              <div class="saved-info">
+                <h4 class="saved-title">Understanding Stress Triggers</h4>
+                <p class="saved-meta">Article • 8 min read</p>
+              </div>
+              <button class="saved-remove-btn" aria-label="Remove from saved">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section class="settings-section">
+          <h3 class="section-title">Settings & Preferences</h3>
+          <div class="settings-list">
+            <div class="setting-item">
+              <div class="setting-info">
+                <h4 class="setting-title">Daily Reminders</h4>
+                <p class="setting-desc">Get notified to practice mindfulness</p>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" id="reminders-toggle" checked>
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+
+            <div class="setting-item">
+              <div class="setting-info">
+                <h4 class="setting-title">Dark Mode</h4>
+                <p class="setting-desc">Switch to dark theme</p>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" id="dark-mode-toggle">
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+
+            <div class="setting-item">
+              <div class="setting-info">
+                <h4 class="setting-title">Email Notifications</h4>
+                <p class="setting-desc">Receive weekly progress updates</p>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" id="email-toggle" checked>
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+
+            <div class="setting-item clickable" id="change-password">
+              <div class="setting-info">
+                <h4 class="setting-title">Change Password</h4>
+                <p class="setting-desc">Update your account password</p>
+              </div>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+
+            <div class="setting-item clickable" id="privacy-settings">
+              <div class="setting-info">
+                <h4 class="setting-title">Privacy Settings</h4>
+                <p class="setting-desc">Manage your privacy preferences</p>
+              </div>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+        </section>
+
+        <!-- Reminders -->
+        <section class="reminders-section">
+          <h3 class="section-title">Reminders</h3>
+          <div class="reminders-list" id="reminders-list">
+            <p>No reminders yet.</p>
+          </div>
+        </section>
+
+        <!-- Notifications -->
+        <section class="notifications-section">
+          <h3 class="section-title">Notifications</h3>
+          <div class="notifications-list" id="notifications-list">
+            <p>No notifications yet.</p>
+          </div>
+        </section>
+
+        
+      </main>
+    </div>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>

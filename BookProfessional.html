@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Book Professional - Your Reliever</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body class="book-professional">
+        <nav class="bp-navbar" id="bpNavbar">
+            <div class="bp-logo">
+                <img src="Images/logo.png" alt="Your Reliever Logo" />
+            </div>
+            <ul class="bp-nav-links">
+                <li><a href="#">Stress &amp; Anxiety</a></li>
+                <li><a href="#bpBookingTitle">Make Bookings</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+
+            <!-- Why talk to our professionals? -->
+            <section class="why" aria-label="Why talk to our professionals?">
+                <div class="why__left">
+                    <h2 class="why__title">Why talk to our professionals?</h2>
+                    <p class="why__text">
+                        Speaking with a licensed professional can help you make sense of stress, build
+                        practical coping strategies, and feel supported through life’s challenges. Our
+                        network includes experienced therapists, psychologists, and counselors who are
+                        committed to compassionate, confidential care tailored to your needs.
+                    </p>
+                </div>
+                <div class="why__right">
+                    <!-- Replace src with your provided image path when ready -->
+                    <img src="Images/PB.jpg" alt="Supportive professional session" class="PB" />
+                </div>
+            </section>
+            
+            <!-- Centered CTA heading below why section -->
+            <div class="bp-cta-wrap">
+                <div class="bp-cta-block">
+                    <h2 class="bp-cta">Get guided throughout your stress journey with the best professionals. All at Your Reliever</h2>
+                    
+                    <!-- Autoplay video section -->
+                    <section class="bp-video" aria-label="Introduction video">
+                        <div class="bp-video__wrapper">
+                            <video class="bp-video__player" src="video/BP video.mp4" autoplay muted loop playsinline controls>
+                            </video>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Make Bookings section -->
+            <section class="bp-booking" aria-labelledby="bpBookingTitle">
+                <div class="bp-booking__wrap">
+                    <h2 class="bp-booking__title" id="bpBookingTitle">Make Bookings</h2>
+                    <form class="bp-booking__form" role="search" aria-label="Search professionals by keyword and category">
+                        <div class="bp-search">
+                            <span class="bp-search__icon" aria-hidden="true">
+                                <!-- inline SVG search icon -->
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M15.5 14h-.79l-.28-.27a6.471 6.471 0 0 0 1.57-4.23 6.5 6.5 0 1 0-6.5 6.5 6.471 6.471 0 0 0 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5Zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14Z" fill="#66707a"/>
+                                </svg>
+                            </span>
+                            <input class="bp-search__input" type="search" name="q" placeholder="Search professionals" aria-label="Search" />
+                        </div>
+                        <label class="bp-select__label" for="bpCategory">Category</label>
+                        <select class="bp-search__select" id="bpCategory" name="category" aria-label="Category">
+                            <option value="">All categories</option>
+                            <option value="counsellors">Counsellors</option>
+                            <option value="psychologists">Psychologists</option>
+                            <option value="motivational-speakers">Motivational speakers</option>
+                            <option value="religious-leaders">Religious leaders</option>
+                        </select>
+
+                        <button class="bp-search__button" type="submit">Search</button>
+                    </form>
+                    
+                    <section class="bp-results" aria-live="polite" aria-label="Search results">
+                        <div id="bpResults" class="bp-results__grid"></div>
+                        <p class="bp-results__empty" id="bpResultsEmpty" hidden>No professionals found. Try a different keyword or category.</p>
+                    </section>
+                </div>
+            </section>
+
+            <!-- Booking Modal -->
+            <div id="bpBookingModal" aria-modal="true" role="dialog" aria-labelledby="bpModalTitle" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1000;align-items:center;justify-content:center;">
+                <div class="bp-modal__panel" style="background:#fff; color:#111; width:min(680px, 92vw); max-height:90vh; overflow:auto; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.2); padding:20px 22px;">
+                    <h3 id="bpModalTitle" class="bp-modal__title">Book a Professional</h3>
+                    <form id="bpModalForm" style="display:block;">
+                        <div class="bp-modal__grid" style="display:grid; grid-template-columns:1fr 1fr; gap:14px 16px; margin-top:10px;">
+                            <div>
+                                <label for="bpName">Full Name</label>
+                                <input type="text" id="bpName" required placeholder="Your name" style="width:100%; padding:10px 12px; border:1px solid #e5e7eb; border-radius:8px;">
+                            </div>
+                            <div>
+                                <label for="bpAge">Age</label>
+                                <input type="number" id="bpAge" min="1" max="120" required placeholder="Age" style="width:100%; padding:10px 12px; border:1px solid #e5e7eb; border-radius:8px;">
+                            </div>
+                            <div>
+                                <label for="bpTitle">Title</label>
+                                <input type="text" id="bpTitle" required placeholder="e.g. Consultation" style="width:100%; padding:10px 12px; border:1px solid #e5e7eb; border-radius:8px;">
+                            </div>
+                            <div>
+                                <label for="bpMeetup">Meetup Form</label>
+                                <select id="bpMeetup" required style="width:100%; padding:10px 12px; border:1px solid #e5e7eb; border-radius:8px;">
+                                    <option value="physical">Physical</option>
+                                    <option value="video">Video call</option>
+                                    <option value="audio">Audio call</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="bpDate">Date</label>
+                                <input type="date" id="bpDate" required style="width:100%; padding:10px 12px; border:1px solid #e5e7eb; border-radius:8px;">
+                            </div>
+                            <div>
+                                <label for="bpTime">Time</label>
+                                <input type="time" id="bpTime" required style="width:100%; padding:10px 12px; border:1px solid #e5e7eb; border-radius:8px;">
+                            </div>
+                            <div class="bp-modal__fullrow">
+                                <label for="bpReason">Appointment Reason</label>
+                                <textarea id="bpReason" rows="3" placeholder="Describe your reason" style="width:100%; padding:10px 12px; border:1px solid #e5e7eb; border-radius:8px;"></textarea>
+                            </div>
+                            <div class="bp-modal__fullrow">
+                                <label for="bpProfessional">Select Professional</label>
+                                <select id="bpProfessional" required style="width:100%; padding:10px 12px; border:1px solid #e5e7eb; border-radius:8px;"></select>
+                            </div>
+                        </div>
+                        <div class="bp-modal__actions" style="display:flex; gap:10px; justify-content:flex-end; margin-top:14px;">
+                            <button type="button" id="bpCancel" class="bp-btn bp-btn--secondary" style="padding:10px 14px; border-radius:8px;">Cancel</button>
+                            <button type="submit" class="bp-search__button" style="padding:10px 14px; border-radius:8px;">Confirm Booking</button>
+                        </div>
+                    </form>
+                    <div id="bpModalMsg" class="bp-modal__msg" style="margin-top:8px; color:#16a34a; font-weight:600;"></div>
+                </div>
+            </div>
+
+        <!-- Footer -->
+        <footer class="site-footer" role="contentinfo">
+          <div class="footer__inner">
+            <!-- Left: Contact/Address -->
+            <address class="footer__address">
+              <strong>Your Reliever</strong><br>
+              Mbarara University of Science and Technology<br>
+              P.O. Box 1410<br>
+              Faculty of Computing and Informatics, Mbarara, Uganda<br>
+              <a href="tel:+256758292985">+256 758 292 985</a>,
+              <a href="tel:+256767439596">+256 767 439 596</a>
+            </address>
+    
+            <!-- Right: Social Icons -->
+            <div class="footer__social" aria-label="Social links">
+              <a href="#" aria-label="Instagram" class="footer__icon"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="WhatsApp" class="footer__icon"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="mailto:info@yourreliever.example" aria-label="Email" class="footer__icon"><i class="fa-solid fa-envelope"></i></a>
+              <a href="#" aria-label="Twitter" class="footer__icon"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+          </div>
+          <!-- Bottom row: Quote and Copyright at the very bottom -->
+          <div class="footer__bottom">
+            <p class="footer__quote">Your mental health, our number one priority.</p>
+            <p class="footer__copy">&copy; 2025 YourReliever. All Rights Reserved.</p>
+          </div>
+        </footer>
+
+        <script src="Script.js" defer></script>
+        <script>
+          (function(){
+            const openBtn = document.getElementById('bpOpenBooking');
+            const modal = document.getElementById('bpBookingModal');
+            const cancelBtn = document.getElementById('bpCancel');
+            const form = document.getElementById('bpModalForm');
+            const sel = document.getElementById('bpProfessional');
+            const msg = document.getElementById('bpModalMsg');
+
+            async function isAuthed(){
+              try{
+                const r = await fetch((location.protocol === 'file:' ? 'http://localhost/YourReliever/' : '') + 'backend/api/user.php?action=full', { credentials: 'include' });
+                const j = await r.json();
+                return !!(j && j.success);
+              }catch(_){ return false; }
+            }
+
+            function openModal(){ modal.style.display = 'flex'; msg.style.display='none'; }
+            function closeModal(){ modal.style.display = 'none'; }
+
+            function loadProfessionals(){
+              return fetch('backend/api/bookings.php?action=professionals', { credentials: 'include' })
+                .then(r=>r.json()).then(j=>{
+                  const list = (j && j.data) || [];
+                  sel.innerHTML = '<option value="">Select professional</option>' + list.map(function(p){
+                    const id = p.professional_id || p.id || p.user_id || '';
+                    const name = p.full_name || p.name || ('#'+id);
+                    return '<option value="'+id+'">'+name+'</option>';
+                  }).join('');
+                  return list;
+                }).catch(()=>{ sel.innerHTML = '<option value="">Failed to load</option>'; return []; });
+            }
+
+            // Expose a helper to open the modal for a specific professional id
+            window.bpShowBookingFor = function(professionalId){
+              openModal();
+              // Ensure list is populated, then preselect
+              loadProfessionals().then(function(){
+                if (professionalId) {
+                  sel.value = String(professionalId);
+                }
+              });
+            };
+
+            if (openBtn) openBtn.addEventListener('click', async function(){
+              if (!await isAuthed()) { alert('Please log in to book a professional.'); return; }
+              openModal(); loadProfessionals();
+            });
+            if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+            if (modal) modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+
+            if (form) form.addEventListener('submit', function(e){
+              e.preventDefault();
+              const professional_id = Number(sel.value);
+              const appointment_date = document.getElementById('bpDate').value;
+              const appointment_time = document.getElementById('bpTime').value;
+              const booking_type = document.getElementById('bpTitle').value.trim();
+              const problem = document.getElementById('bpReason').value.trim();
+              const meetup = document.getElementById('bpMeetup').value;
+              if (!professional_id || !appointment_date || !appointment_time || !booking_type) {
+                alert('Please fill all required fields.'); return;
+              }
+              fetch('backend/api/bookings.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                credentials: 'include',
+                body: JSON.stringify({ action: 'create', professional_id, appointment_date, appointment_time, booking_type, problem, meetup })
+              }).then(r=>r.json()).then(j=>{
+                if (!j || j.success === false) { throw new Error((j&&j.error)||'Failed'); }
+                msg.textContent = 'Booking confirmed! A reminder and notification have been added to your profile.';
+                msg.style.display = 'block';
+                setTimeout(closeModal, 1200);
+              }).catch(err=>{
+                alert('Please log in to book a professional.');
+              });
+            });
+          })();
+        </script>
+    </body>
+</html>

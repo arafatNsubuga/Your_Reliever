@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Library</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="ContentLibrary.css">
+</head>
+<body class="content-library">
+  <!-- Fixed navbar (same style as Chat Forum / BookProfessional) -->
+  <nav class="bp-navbar" role="navigation" aria-label="Main navigation">
+    <div class="bp-logo">
+      <img src="Images/logo.png" alt="Your Reliever Logo">
+    </div>
+    <ul class="bp-nav-links">
+      <li><a href="Index.html">Home</a></li>
+      <li><a href="ContentLibrary.html#articles">Articles</a></li>
+      <li><a href="ContentLibrary.html#videos">Videos</a></li>
+      <li><a href="ContentLibrary.html#images">Images</a></li>
+    </ul>
+  </nav>
+
+  <main class="bp-container">
+    <h1 class="bp-title">Welcome to our Content Library</h1>
+    <p class="bp-sub">Curated resources to help you learn, practice, and grow.Keep updated with the latest news,updates,Videos,Images and articles to relieve you of your stress and make your stressed day brand new.Your reliever is here for you to serve you and ensure your mental wellness is catered for. Watch Videos ,Read articles , Access to latest news........ all at your reliever </p>
+
+    <!-- Decorative article image (right corner) -->
+    <figure class="cl-article-art" aria-hidden="true">
+      <!-- Update the src to an article-related image available in your Images/ folder -->
+      <img src="Images/Article.jpg" alt="" />
+    </figure>
+
+    <!-- (moved) Upload controls will live in the Content Library container below -->
+
+    <!-- Separator line -->
+    <hr class="cl-separator" aria-hidden="true" />
+
+    <!-- Library section: left nav + right content -->
+    <section class="cl-section" aria-label="Library content">
+      <aside class="cl-aside" aria-label="Library navigation">
+        <h2 class="cl-aside__title">Library</h2>
+        <nav class="cl-nav" aria-label="Categories">
+          <ul class="cl-nav__list">
+            <li class="cl-nav__item" data-cat="videos" tabindex="0">Video Library</li>
+            <li class="cl-nav__item" data-cat="images" tabindex="0">Images</li>
+            <li class="cl-nav__item" data-cat="articles" tabindex="0">Articles</li>
+            <li class="cl-nav__item" data-cat="news" tabindex="0">Latest News</li>
+          </ul>
+        </nav>
+      </aside>
+
+      <section class="cl-main" aria-live="polite">
+        <h2 class="cl-main__title">Content Library</h2>
+        <form class="cl-search" role="search" aria-label="Search library">
+          <label class="sr-only" for="clSearchInput">Search library</label>
+          <input id="clSearchInput" class="cl-search__input" type="search" name="q" placeholder="Search by name..." autocomplete="off" />
+          <button class="cl-search__button" type="submit">Search</button>
+        </form>
+
+        <div class="cl-grid" id="clGrid" aria-label="Results"></div>
+
+        <div class="cl-actions">
+          <button class="cl-upload-btn" type="button" aria-label="Upload to selected category">Upload</button>
+          <input class="cl-upload-input" type="file" hidden aria-hidden="true" />
+        </div>
+      </section>
+    </section>
+    
+    <!-- Light blue info section with downward triangle paragraph -->
+    <section class="cl-info" aria-label="About the library">
+      <div class="cl-triangle" role="note">
+        <p class="cl-triangle-text">
+          <span class="line">Discover videos, images, articles, and campus news curated to support your wellbeing.</span>
+          <span class="line">Explore at your pace and return anytime to pick up from where you left.</span>
+          <span class="line">Save items that resonate and share resources with friends who might need them.</span>
+          <span class="line">New content is added regularly in collaboration with our wellness community.</span>
+          <span class="line">Your journey matters—learn, reflect, and grow with Your Reliever.</span>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer__inner">
+      <!-- Left: Contact/Address -->
+      <address class="footer__address">
+        <strong>Your Reliever</strong><br>
+        Mbarara University of Science and Technology<br>
+        P.O. Box 1410<br>
+        Faculty of Computing and Informatics, Mbarara, Uganda<br>
+        <a href="tel:+256758292985">+256 758 292 985</a>,
+        <a href="tel:+256767439596">+256 767 439 596</a>
+      </address>
+
+      <!-- Right: Social Icons -->
+      <div class="footer__social" aria-label="Social links">
+        <a href="https://www.instagram.com/yourreliever" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__icon"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/256758292985" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="footer__icon"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="mailto:mwimaedrine@gmail.com" aria-label="Email" class="footer__icon"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://twitter.com/yourreliever" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="footer__icon"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__quote">Your mental health, our number one priority.</p>
+      <p class="footer__copy">&copy; 2025 YourReliever. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Image viewer modal -->
+  <div class="cl-modal" aria-hidden="true" role="dialog">
+    <div class="cl-modal__backdrop" data-modal-close></div>
+    <div class="cl-modal__content" role="document">
+      <button class="cl-modal__close" type="button" aria-label="Close" data-modal-close>&times;</button>
+      <img class="cl-modal__img" alt="" />
+    </div>
+  </div>
+
+  <script src="contentLibrary.js" defer></script>
+</body>
+</html>

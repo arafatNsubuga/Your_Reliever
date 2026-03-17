@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatForum</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ChatForum.css">
+</head>
+<body class="chat-forum">
+    <!-- Fixed navbar (same style as BookProfessional) -->
+    <nav class="bp-navbar" role="navigation" aria-label="Main navigation">
+        <div class="bp-logo">
+            <img src="Images/logo.png" alt="Your Reliever Logo">
+        </div>
+        <ul class="bp-nav-links">
+            <li><a href="Index.html">Home</a></li>
+            <li class="cf-topics">
+              <a href="#" id="cfTopicsToggle" aria-haspopup="true" aria-expanded="false">Topics</a>
+              <ul class="cf-topics__menu" id="cfTopicsMenu" hidden></ul>
+            </li>
+            <li><a href="Emergency.html">Help</a></li>
+        </ul>
+    </nav>
+
+    <main class="bp-container">
+        <section class="cf-hero" aria-label="Chat forum header">
+            <h1 class="bp-title title-stacked">
+                <span class="title-line title-main">YOUR RELIEVER CHAT FORUM</span>
+                <!--
+                <span class="title-line title-sub">CHAT FORUM</span>-->
+            </h1>
+            <p class="bp-sub">"Connect, share and support each other.Interactions with different people can surely bring relief"</p>
+
+            <!-- Forum search -->
+            <form class="forum-search" role="search" aria-label="Search forum threads">
+                <label class="sr-only" for="forumSearchInput">Search forum</label>
+                <input
+                  id="forumSearchInput"
+                  class="forum-search__input"
+                  type="search"
+                  name="q"
+                  placeholder="search by topics,group or members...."
+                  autocomplete="off"
+                />
+                <button class="forum-search__button" type="submit">Search</button>
+            </form>
+        </section>
+
+        <!-- Chat forums grid -->
+        <section class="cf-list" aria-label="Available chat forums">
+            <h2 class="cf-list__title">Explore Chat Forums</h2>
+            <div class="cf-cards">
+                <!-- Row 1 -->
+                <article class="cf-card">
+                    <h3 class="cf-card__name">Mindful Breathing</h3>
+                    <ul class="cf-card__meta">
+                        <li><strong>Topic:</strong> Stress Relief</li>
+                        <li><strong>Group:</strong> Wellness</li>
+                        <li><strong>Members:</strong> 248</li>
+                    </ul>
+                    <div class="cf-card__actions">
+                        <button class="cf-card__join" type="button">Join</button>
+                    </div>
+                </article>
+                <article class="cf-card">
+                    <h3 class="cf-card__name">Exam Anxiety Support</h3>
+                    <ul class="cf-card__meta">
+                        <li><strong>Topic:</strong> Study Pressure</li>
+                        <li><strong>Group:</strong> Students</li>
+                        <li><strong>Members:</strong> 392</li>
+                    </ul>
+                    <div class="cf-card__actions">
+                        <button class="cf-card__join" type="button">Join</button>
+                    </div>
+                </article>
+                <article class="cf-card">
+                    <h3 class="cf-card__name">Daily Gratitude</h3>
+                    <ul class="cf-card__meta">
+                        <li><strong>Topic:</strong> Positivity</li>
+                        <li><strong>Group:</strong> Community</li>
+                        <li><strong>Members:</strong> 181</li>
+                    </ul>
+                    <div class="cf-card__actions">
+                        <button class="cf-card__join" type="button">Join</button>
+                    </div>
+                </article>
+                <article class="cf-card">
+                    <h3 class="cf-card__name">Sleep Better</h3>
+                    <ul class="cf-card__meta">
+                        <li><strong>Topic:</strong> Sleep Hygiene</li>
+                        <li><strong>Group:</strong> Wellness</li>
+                        <li><strong>Members:</strong> 205</li>
+                    </ul>
+                    <div class="cf-card__actions">
+                        <button class="cf-card__join" type="button">Join</button>
+                    </div>
+                </article>
+
+                <!-- Row 2 -->
+                <article class="cf-card">
+                    <h3 class="cf-card__name">First-Year Transitions</h3>
+                    <ul class="cf-card__meta">
+                        <li><strong>Topic:</strong> Adapting to Campus</li>
+                        <li><strong>Group:</strong> Freshers</li>
+                        <li><strong>Members:</strong> 134</li>
+                    </ul>
+                    <div class="cf-card__actions">
+                        <button class="cf-card__join" type="button">Join</button>
+                    </div>
+                </article>
+                <article class="cf-card">
+                    <h3 class="cf-card__name">Healthy Relationships</h3>
+                    <ul class="cf-card__meta">
+                        <li><strong>Topic:</strong> Communication</li>
+                        <li><strong>Group:</strong> Peer Support</li>
+                        <li><strong>Members:</strong> 276</li>
+                    </ul>
+                    <div class="cf-card__actions">
+                        <button class="cf-card__join" type="button">Join</button>
+                    </div>
+                </article>
+                <article class="cf-card">
+                    <h3 class="cf-card__name">Financial Wellness</h3>
+                    <ul class="cf-card__meta">
+                        <li><strong>Topic:</strong> Budgeting</li>
+                        <li><strong>Group:</strong> Life Skills</li>
+                        <li><strong>Members:</strong> 159</li>
+                    </ul>
+                    <div class="cf-card__actions">
+                        <button class="cf-card__join" type="button">Join</button>
+                    </div>
+                </article>
+                <article class="cf-card">
+                    <h3 class="cf-card__name">Faith & Support</h3>
+                    <ul class="cf-card__meta">
+                        <li><strong>Topic:</strong> Spiritual Care</li>
+                        <li><strong>Group:</strong> Community</li>
+                        <li><strong>Members:</strong> 311</li>
+                    </ul>
+                    <div class="cf-card__actions">
+                        <button class="cf-card__join" type="button">Join</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- Conversation CTA banner -->
+        <section class="cf-cta" aria-label="Join the community">
+            <p class="cf-cta__text">Join the conversation. Find a community.</p>
+        </section>
+    
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer__inner">
+        <!-- Left: Contact/Address -->
+        <address class="footer__address">
+          <strong>Your Reliever</strong><br>
+          Mbarara University of Science and Technology<br>
+          P.O. Box 1410<br>
+          Faculty of Computing and Informatics, Mbarara, Uganda<br>
+          <a href="tel:+256758292985">+256 758 292 985</a>,
+          <a href="tel:+256767439596">+256 767 439 596</a>
+        </address>
+
+        <!-- Right: Social Icons -->
+        <div class="footer__social" aria-label="Social links">
+          <a href="https://www.instagram.com/yourreliever" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__icon"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/256758292985" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="footer__icon"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="mailto:mwimaedrine@gmail.com" aria-label="Email" class="footer__icon"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://twitter.com/yourreliever" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="footer__icon"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <!-- Bottom row: Quote and Copyright at the very bottom -->
+      <div class="footer__bottom">
+        <p class="footer__quote">Your mental health, our number one priority.</p>
+        <p class="footer__copy">&copy; 2025 YourReliever. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="chatForum.js" defer></script>
+</body>
+</html>

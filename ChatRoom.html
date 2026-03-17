@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Room — Your Reliever</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="ChatForum.css">
+  <style>
+    /* Minimal dark mode styles for chat room */
+    body.chat-room.dark-mode { background: #0f172a; color: #e2e8f0; }
+    body.chat-room.dark-mode .bp-navbar { background: #0b1220; border-bottom: 1px solid #1f2937; }
+    body.chat-room.dark-mode .bp-nav-links a { color: #cbd5e1; }
+    body.chat-room.dark-mode .cf-hero { background: linear-gradient(90deg, rgba(30,41,59,.6), rgba(15,23,42,.6)); border-radius: 10px; padding: 8px 12px; }
+    body.chat-room.dark-mode #chatMessages { background: #0b1220 !important; border-color: #1f2937 !important; color: #e2e8f0; }
+    body.chat-room.dark-mode input#chatInput { background:#111827; color:#e5e7eb; border-color:#374151; }
+    body.chat-room.dark-mode .cf-card__join { background:#334155; color:#e5e7eb; border: 1px solid #475569; }
+    /* Keep header below navbar (structure already ensures this) */
+  </style>
+</head>
+<body class="chat-room">
+  <nav class="bp-navbar" role="navigation" aria-label="Main navigation">
+    <div class="bp-logo">
+      <img src="Images/logo.png" alt="Your Reliever Logo">
+    </div>
+    <ul class="bp-nav-links">
+      <li><a href="Index.html">Home</a></li>
+      <li><a href="ChatForum.html">Back to Forums</a></li>
+    </ul>
+  </nav>
+  <main class="bp-container">
+    <!-- Chat toolbar below navbar, right-aligned -->
+    <div class="chat-toolbar" style="display:flex;justify-content:flex-end;gap:8px;padding:20px 12px 0 12px;">
+      <button id="chatDarkToggle" title="Toggle dark mode" style="border:1px solid #e5e7eb;border-radius:8px;background:#fff;padding:6px 10px;cursor:pointer;">Dark</button>
+    </div>
+    <header class="cf-hero" aria-label="Chat header" style="display:flex;align-items:center;gap:12px; margin-top:24px;">
+      <img id="roomAvatar" src="Images/logo.png" alt="Forum avatar" style="width:52px;height:52px;border-radius:50%;object-fit:cover;border:1px solid #e5e7eb;">
+      <div>
+        <h1 class="bp-title" id="roomTitle" style="margin:0;">Chat Room</h1>
+        <p class="bp-sub" id="roomMeta" style="margin:2px 0 0;color:#667085;font-size:0.9rem;"></p>
+      </div>
+    </header>
+
+    <section class="chat-panel" aria-label="Chat messages" style="display:flex;flex-direction:column;gap:12px;max-width:900px;margin:0 auto;">
+      <div id="chatMessages" style="border:1px solid #e0e0e0;border-radius:12px;padding:12px;height:50vh;overflow:auto;background:#fff;"></div>
+      <form id="chatForm" style="display:flex;gap:8px;">
+        <input type="text" id="chatInput" placeholder="Type a message..." autocomplete="off" style="flex:1;padding:10px;border:1px solid #ddd;border-radius:8px;" />
+        <button type="submit" class="cf-card__join">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="chatRoom.js" defer></script>
+</body>
+</html>

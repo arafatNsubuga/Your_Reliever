@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Log In — Stress & Anxiety</title>
+  <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+  <main class="login-root">
+    <section class="login-card" aria-labelledby="login-title">
+      <button class="close-home" id="login-close" aria-label="Return to home">✕</button>
+      <h1 id="login-title">Welcome back</h1>
+      <p class="login-sub">Sign in to access tools to manage stress & anxiety.</p>
+
+      <form id="login-form" novalidate>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required inputmode="email" autocomplete="email" />
+
+        <label for="password">Password</label>
+        <div class="pw-row">
+          <input id="password" name="password" type="password" required autocomplete="current-password" />
+          <button type="button" id="pw-toggle" aria-label="Show password">👁</button>
+        </div>
+
+        <div class="row-between">
+          <label class="remember"><input type="checkbox" id="remember" name="remember"/> Remember me</label>
+          <a href="#" class="forgot">Forgot?</a>
+        </div>
+
+        <button class="primary" type="submit">Sign in</button>
+
+        <div class="or">or</div>
+        <button type="button" class="secondary" id="demo">Continue as Guest</button>
+      </form>
+
+      <p class="signup">Don't have an account? <a href="register.html">Create one</a></p>
+    </section>
+  </main>
+
+  <script src="Login.js"></script>
+</body>
+</html>

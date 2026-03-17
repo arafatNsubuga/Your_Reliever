@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stressand Anxiety</title>
+    <link rel="stylesheet" href="Stress&anxiety.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo"><img src="Images/logo.png" alt="Your Reliever Logo"></a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="Emergency.html">Emergency</a>
+                <a href="Login.html" class="btn-login">Log In</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <section class="hero">
+            <div class="hero-left">
+                <h1>Unwind and Relax anytime</h1>
+                <p>
+                    Take a deep breath and let go of the tension.<br>
+                    Find calm in the present moment and reset your mind.<br>
+                    Build a routine that supports your peace and clarity.<br>
+                    You are not alone—every step forward counts.<br>
+                    Start small, stay consistent, and feel the difference.
+                </p>
+            </div>
+            <div class="hero-right">
+                <img src="Images/NavBackground.jpg" alt="Relaxing illustration or photo">
+            </div>
+        </section>
+        <section class="breathing">
+            <h2>Lets try a quick breathing exercise</h2>
+            <div class="breathing-container">
+                <div class="breathing-visual">
+                    <div class="breathing-circle" aria-hidden="true"></div>
+                </div>
+                <div class="breathing-instruction" aria-live="polite">Press Start</div>
+                <div class="breathing-controls">
+                    <button id="breath-start" type="button">Start</button>
+                    <button id="breath-stop" type="button">Stop</button>
+                </div>
+            </div>
+        </section>
+        <section class="nature">
+            <h2>relax your mind with cool breeze  sounds of nature</h2>
+            <div class="sounds">
+                <div class="sound-item">
+                    <h3>Forest</h3>
+                    <audio controls preload="none">
+                        <source src="Media/forest.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="sound-item">
+                    <h3>Ocean Waves</h3>
+                    <audio controls preload="none">
+                        <source src="Media/ocean.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="sound-item">
+                    <h3>Rain</h3>
+                    <audio controls preload="none">
+                        <source src="Media/rain.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </section>
+        <section class="reviews" aria-label="User Reviews">
+            <div class="reviews-header">
+                <h2>What people say</h2>
+                <div class="reviews-controls">
+                    <button class="reviews-prev" type="button" aria-label="Previous review">&#8592;</button>
+                    <button class="reviews-next" type="button" aria-label="Next review">&#8594;</button>
+                </div>
+            </div>
+            <div class="reviews-viewport">
+                <div class="reviews-track">
+                    <article class="review-card">
+                        <p>“The breathing guide really helped me slow down and feel present. I use it daily.”</p>
+                        <div class="review-meta">— Namanya Spencer</div>
+                    </article>
+                    <article class="review-card">
+                        <p>“Simple and soothing. The nature sounds are perfect for quick breaks at work.”</p>
+                        <div class="review-meta">— Mary Ritah</div>
+                    </article>
+                    <article class="review-card">
+                        <p>“Clean design, easy to follow, and genuinely relaxing. Highly recommend.”</p>
+                        <div class="review-meta">— Edrine Mwima</div>
+                    </article>
+                    <article class="review-card">
+                        <p>“I love the minimal layout. The exercise timings feel just right for me.”</p>
+                        <div class="review-meta">— Haniel Ngabirano</div>
+                    </article>
+                    <article class="review-card">
+                        <p>“Ocean waves track helps me focus. I put it on loop during study sessions.”</p>
+                        <div class="review-meta">— Arafat Nsubuga</div>
+                    </article>
+                    <article class="review-card">
+                        <p>“Five minutes with the breathing tool and I’m noticeably calmer.”</p>
+                        <div class="review-meta">— Arnold Baluku </div>
+                    </article>
+                    <article class="review-card">
+                        <p>“Great on mobile too. Buttons are clear, and animations are smooth.”</p>
+                        <div class="review-meta">— Lule Vianney</div>
+                    </article>
+                    <article class="review-card">
+                        <p>“Exactly what I needed between meetings—quick, effective, and gentle.”</p>
+                        <div class="review-meta">— Bendeka Douglus</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="faq" aria-label="Frequently Asked Questions about Stress">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <article class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq1">What is stress?</button>
+                    <div id="faq1" class="faq-answer" hidden>
+                        Stress is your body’s response to pressure. Short-term stress can be helpful, but long-term stress can affect your sleep, mood, and health.
+                    </div>
+                </article>
+                <article class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq2">How can I manage stress quickly?</button>
+                    <div id="faq2" class="faq-answer" hidden>
+                        Try paced breathing (inhale–hold–exhale), a short walk, or brief grounding exercises (like naming 5 things you can see) to reset your nervous system.
+                    </div>
+                </article>
+                <article class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq3">When should I seek professional help?</button>
+                    <div id="faq3" class="faq-answer" hidden>
+                        If stress interferes with daily activities, sleep, appetite, or relationships for more than a few weeks, consider speaking with a professional.
+                    </div>
+                </article>
+                <article class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq4">Do breathing exercises really help?</button>
+                    <div id="faq4" class="faq-answer" hidden>
+                        Yes. Slow, deep breathing can stimulate the parasympathetic system, lowering heart rate and helping your body move out of fight-or-flight.
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" aria-label="Footer">
+        <div class="footer-inner">
+            <div class="footer-col footer-brand-col">
+                <div class="footer-brand">Your Reliever</div>
+                <p class="footer-desc">Tools and guidance to help you find calm, build resilience, and feel better—anytime.</p>
+                <div class="footer-social" aria-label="Social links">
+    <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+</div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-list">
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="Emergency.html">Emergency</a></li>
+                    <li><a href="Login.html">Log In</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Resources</h3>
+                <ul class="footer-list">
+                    <li><a href="ContentLibrary.html">Content Library</a></li>
+                    <li><a href="ChatForum.html">Chat Forum</a></li>
+                    <li><a href="BookProfessional.html">Book Professional</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-newsletter-col">
+                <h3>Stay Updated</h3>
+                <form class="footer-newsletter" action="#" method="post" onsubmit="return false;">
+                    <input type="email" placeholder="Enter your email" aria-label="Email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-copy">&copy; <span id="year"></span> Your Reliever. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="Stress&anxiety.js"></script>
+ </body>
+</html>
